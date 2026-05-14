@@ -3,108 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Webpage Title (will show on tab) -->
-    <title>Professional Portfolio</title>
+    <title>Salem Kiar | Portfolio</title>
     <style>
-        /* Basic styling for the page */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+        :root {
+            --background: #f5f7fb;
+            --surface: #ffffff;
+            --primary: #1d4ed8;
+            --text: #1f2937;
+            --muted: #475569;
+            --border: #e2e8f0;
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, "Segoe UI", sans-serif;
+            color: var(--text);
+            background: var(--background);
+        }
+
+        body, button, input, textarea {
+            font: inherit;
+        }
+
         header {
-            background: #333;
+            background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
             color: #fff;
-            padding: 1rem 0;
+            padding: 3rem 1.5rem 2rem;
             text-align: center;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 1rem auto 0;
+            max-width: 680px;
+            color: rgba(255, 255, 255, 0.87);
+            line-height: 1.7;
+        }
+
         nav {
-            margin: 1rem 0;
+            margin-top: 2rem;
         }
+
         nav a {
-            color: #fff;
+            color: #c7d2fe;
             text-decoration: none;
-            margin: 0 1rem;
+            margin: 0 0.75rem;
+            font-weight: 600;
         }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
         section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
             padding: 2rem;
-            border-bottom: 1px solid #ddd;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
         }
+
+        section h2 {
+            margin-top: 0;
+            font-size: 1.75rem;
+            color: var(--text);
+        }
+
+        .section-intro {
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card,
+        .credential-item,
+        .contact-item {
+            margin-bottom: 1.25rem;
+        }
+
+        .project-card h3,
+        .credential-item h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .project-card p,
+        .credential-item p,
+        .contact-item p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        .project-card a,
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .project-card a:hover,
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .metadata {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.75rem;
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .footer-note {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-top: 0.75rem;
+        }
+
         footer {
             text-align: center;
-            padding: 1rem;
-            background: #333;
-            color: #fff;
+            padding: 1.5rem 1rem 2rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 640px) {
+            header {
+                padding: 2.5rem 1rem 1.5rem;
+            }
+
+            main {
+                padding: 1.5rem 1rem 3rem;
+            }
+
+            nav {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <h1>Salem Kiar</h1>
+        <p>A motivated high school student with a strong interest in STEM, especially biochemical engineering. I am eager to gain hands-on experience in laboratory settings, CAD printing, and other practical activities that support my long-term career goals.</p>
         <nav>
-            <a href="#about">About Me</a>
+            <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#credentials">Credentials</a>
-            <a href="#contact">Contact Info</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            <!-- Add a brief introduction about yourself here -->
-            Hello! My name is Salem Kiar. I am passionate about [your interests or profession]. 
-            Welcome to my portfolio website!
-        </p>
-    </section>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="section-intro">I am a driven student exploring the intersection of science, engineering, and innovation. My focus is biochemical engineering, and I am actively pursuing experiences that will help me build strong technical skills and prepare for future work in labs, research, and product development.</p>
+            <div class="metadata">
+                <span>Current student</span>
+                <span>Biochemical engineering focus</span>
+                <span>Interest in lab research & CAD</span>
+            </div>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>
-            <!-- Add a list or description of your projects here -->
-            Here are some of the projects I have worked on:
-        </p>
-        <ul>
-            <li>Project 1: [Brief description] <a href="[link to project repository]" target="_blank">[Project repository]</a></li>
-            <li>Project 2: [Brief description] <a href="[link to project repository]" target="_blank">[Project repository]</a></li>
-        </ul>
-    </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p class="section-intro">These projects showcase my approach to problem solving, programming logic, and user interaction design.</p>
 
-    <!-- Credentials Section -->
-    <section id="credentials">
-        <h2>Credentials</h2>
-        <p>
-            <!-- Add your credentials, certifications, or achievements here -->
-            I have earned the following certifications and achievements:
-        </p>
-        <ul>
-            <li>Certification 1: [Details]</li>
-            <li>Certification 2: [Details]</li>
-            <li>Certification 3: [Details]</li>
-            <!-- Add images of your certification digital badges -->
-        </ul>
-    </section>
+            <div class="project-card">
+                <h3>Email Organizer</h3>
+                <p>This project categorizes user-entered emails into Education, People, and Promotion. It analyzes message content using keywords, sender or subject data, and the sent date, allowing users to define custom category keywords.</p>
+                <div class="metadata">
+                    <span>Python / Java</span>
+                    <span>Email sorting</span>
+                    <span><a href="https://github.com/phAPCSAperiod2/final-project-salemk9" target="_blank">Repository</a></span>
+                </div>
+            </div>
 
-    <!-- Contact Info Section -->
-    <section id="contact">
-        <h2>Contact Info</h2>
-        <p>
-            <!-- Add your contact information here -->
-            Feel free to reach out to me:
-        </p>
-        <ul>
-            <li>Email: [salemkiar@gmail.com]</li>
-            <li>LinkedIn: <a href="[your-linkedin-profile]" target="_blank">[Your LinkedIn]</a></li>
-        </ul>
-    </section>
+            <div class="project-card">
+                <h3>Super Mario Bros Project</h3>
+                <p>A character interaction application featuring Mario, Luigi, Bowser, and Wario. Users can explore each character and engage with themed behaviors designed to bring the project to life.</p>
+                <div class="metadata">
+                    <span>Java</span>
+                    <span>Interactive experience</span>
+                    <span><a href="https://github.com/salemk9/AP-CSA-Semester-1-Final-Project-Mario-Theme" target="_blank">Repository</a></span>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer Section -->
+        <section id="credentials">
+            <h2>Credentials</h2>
+            <p class="section-intro">Recognitions and achievements that reflect my academic progress and commitment to learning.</p>
+
+            <div class="credential-item">
+                <h3>AP Scholar Award</h3>
+                <p>Awarded by College Board in 2024 for strong performance in Advanced Placement coursework.</p>
+            </div>
+
+            <div class="credential-item">
+                <h3>PHHS Honor Roll</h3>
+                <p>Consistently recognized on the honor roll from 2023 to the present.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p class="section-intro">I welcome opportunities for mentorship, collaboration, and STEM-focused projects. Please reach out through the contact details below.</p>
+
+            <div class="contact-item">
+                <p><strong>Email:</strong> <a href="mailto:salemkiar@gmail.com">salemkiar@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <p><strong>Phone:</strong> <a href="tel:+16196093827">(619) 609-3827</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Deployment</h2>
+            <p class="section-intro">This portfolio is ready to publish on GitHub Pages. Since your repository is named <strong>salemk9.github.io</strong>, GitHub Pages can serve this site automatically from the main branch.</p>
+            <p class="footer-note">If you want, I can also help you add a short README with deployment instructions or verify your repository settings.</p>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2025 [Salem Kiar]. All rights reserved.</p>
+        <p>&copy; 2026 Salem Kiar. Built as a professional STEM portfolio.</p>
     </footer>
 </body>
 </html>
